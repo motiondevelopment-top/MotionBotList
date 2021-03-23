@@ -8,7 +8,7 @@ from MotionBotList import Exceptions, Objects
 
 # SETUP CLASS
 class connect:
-    def __init__(self, token:str, url="https://beta.bots.motiondevelopment.top/api", api_version="v1.2"):
+    def __init__(self, token:str, url="https://www.motiondevelopment.top/api", api_version="v1.2"):
         self.token = token
         self.url = str(url)+"/"+str(api_version)+"/"
     
