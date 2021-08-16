@@ -1,5 +1,5 @@
 # MotionBotList
-Interact with motion botlist with python scripts.
+Interact with Motion Botlist with python scripts.
 
 # Examples on host to use
 Here is a quick example on how you can update your bots status.
@@ -10,7 +10,7 @@ bot_list = MotionBotList.connect("your_api_key")
 
 bot_list.update(bot_id, server_count) # Add your bots data here
 ```
-Run the script and your bots status should be updated. If there was a error there will be a exception. To handle excaption you could do the following:
+Run the script and your bots status should be updated. If there was a error there will be a exception. To handle exceptions, you could do the following:
 ```py
 import MotionBotList
 from MotionBotList import Exceptions
@@ -20,9 +20,9 @@ bot_list = MotionBotList.connect("your_api_key")
 try:
   bot_list.update(bot_id, server_count)
 except Exceptions.Forbidden:
-  print("You don't have access to update your status, invailid token or wrong bot")
+  print("You don't have access to update the status, invalid token or wrong bot")
 except Exceptions.BotNotFound:
-  print("The bot ID was invailed")
+  print("The bot ID was invalid")
 except Exception as error:
   print(error)
 ```
@@ -62,11 +62,11 @@ Will return a list with a `voteuser` object.
     - name
         * Returns the bot name
     - avatar
-        * Bots avatar code (not the url just the code)
+        * Returns the bots avatar code (not the url just the code)
     - avatar_url
-        * Bots avatar url (Raw image link to discord cdn)
+        * Returns the bots avatar url (Raw image link to discord cdn)
     - status
-        * The last bots status report to our site (Might be inacruate)
+        * Returns the last bots status report to our site (Might be inacruate)
     - co_owners
         * Returns a list with co-owners
     - discord
@@ -76,31 +76,31 @@ Will return a list with a `voteuser` object.
     - lib
         * Returns the bots lib selected on the site
     - list_date
-        * Returns the date since when the bot is listed on the site (YYYY-MM-DD format)
+        * Returns the date that the bot was listed (YYYY-MM-DD format)
     - owner_id
-        * The bots onwer ID
+        * Returns the bots onwer ID
     - owner_name
-        * The bots owner name (User#0000)
+        * Returns the bots owners' name (User#0000)
     - prefix
-        * The bots preffix
+        * Returns the bots prefix
     - servers
-        * The number of server posted to our site (None if no server count was posted)
+        * Returns the number of servers posted to our site (None if no server count was posted)
     - website
-        * The bots website (None if no website was provided
+        * Returns the bots website (None if no website was provided)
     - tops
-        * List of top features selected
+        * Returns a list of top features selected
     - vanity_url  
-        * The vanity url of the bot (None if bot doesn't have a vanity url)
+        * Returns the vanity url of the bot (None if bot doesn't have a vanity url)
  
-* voteobj - The object return when getting bot votes
+* voteobj - The object to return when getting bot votes
     - vote_time
-        * The time the user has voted (YYYY-DD-MM HH:MM:SS)
+        * Returns the time the user has voted (YYYY-DD-MM HH:MM:SS)
     - is_user
         * If it is a user, or just a vote holder (See more info in our vote docs about this)
     - user_id
-        * The users id
+        * Returns the users id
     - user_name
-        * The users name (user#0000)
+        * Returns the users name (User#0000)
 
 
 ## Voting system
